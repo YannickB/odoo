@@ -35,6 +35,7 @@ _logger = logging.getLogger('odoo')
 
 def check_root_user():
     """Warn if the process's user is 'root' (on POSIX system)."""
+    return
     if os.name == 'posix':
         import pwd
         if pwd.getpwuid(os.getuid())[0] == 'root':
